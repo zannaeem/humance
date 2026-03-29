@@ -31,8 +31,8 @@ const SplashScreen = () => {
 
   return (
     <div
-      className={`fixed inset-0 z-[100] bg-background flex items-center justify-center transition-opacity duration-1000 ${
-        animationPhase === 2 ? 'opacity-0' : 'opacity-100'
+      className={`fixed inset-0 z-[100] bg-background flex items-center justify-center transition-transform duration-1000 ease-in-out ${
+        animationPhase === 2 ? '-translate-y-full' : 'translate-y-0'
       }`}
     >
       <h1
