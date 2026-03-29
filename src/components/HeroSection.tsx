@@ -1,8 +1,52 @@
-import { ArrowRight, Play, Star } from "lucide-react";
+import { ArrowRight, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import najibHead from "@/assets/kepalanajib.jpeg";
 import { useState, useEffect } from "react";
 import AnimatedBackground from "./AnimatedBackground";
+
+const VideoEmbed = () => {
+  const [playing, setPlaying] = useState(false);
+
+  if (playing) {
+    return (
+      <div className="aspect-video">
+        <iframe
+          className="w-full h-full"
+          src="https://www.youtube.com/embed/MdL2lJtwwow?autoplay=1&rel=0"
+          title="Humance Demo"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        />
+      </div>
+    );
+  }
+
+  return (
+    <div
+      className="relative aspect-video cursor-pointer group"
+      onClick={() => setPlaying(true)}
+    >
+      <img
+        src="/demo-thumbnail.png"
+        alt="Humance Demo"
+        className="w-full h-full object-cover"
+      />
+      {/* Play button */}
+      <div className="absolute inset-0 flex items-center justify-center">
+        <div className="w-16 h-16 rounded-full bg-black/60 backdrop-blur-sm flex items-center justify-center group-hover:bg-primary/80 transition-colors duration-300">
+          <Play className="w-7 h-7 text-white fill-white ml-1" />
+        </div>
+      </div>
+      {/* Label */}
+      <div className="absolute top-4 left-4 bg-black/70 backdrop-blur-sm rounded-lg px-3 py-2">
+        <div className="flex items-center gap-2">
+          <Play className="w-4 h-4 text-white" />
+          <span className="text-white text-sm font-medium">Humance Demo</span>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 const HeroSection = () => {
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
@@ -63,30 +107,11 @@ const HeroSection = () => {
           
           {/* Video Demo Section */}
           <div className="animate-fade-up-delay">
-            <div className="relative w-full max-w-5xl mx-auto bg-card rounded-2xl border border-border overflow-hidden shadow-large" style={{
+            <div className="relative w-full max-w-5xl mx-auto bg-card rounded-2xl overflow-hidden" style={{
               boxShadow: '0 0 20px rgba(34, 197, 94, 0.3), 0 0 40px rgba(34, 197, 94, 0.2), 0 0 60px rgba(34, 197, 94, 0.1)',
               border: '2px solid rgba(34, 197, 94, 0.4)'
             }}>
-              <div className="relative">
-                <video
-                  className="w-full aspect-video object-cover rounded-t-2xl"
-                  controls
-                  preload="metadata"
-                  poster="/demo-thumbnail.png"
-                >
-                  <source src="/Humance Demo V3.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-                
-                {/* Video overlay with title */}
-                <div className="absolute top-4 left-4 bg-black/70 backdrop-blur-sm rounded-lg px-3 py-2">
-                  <div className="flex items-center gap-2">
-                    <Play className="w-4 h-4 text-white" />
-                    <span className="text-white text-sm font-medium">Humance Demo</span>
-                  </div>
-                </div>
-              </div>
-              
+              <VideoEmbed />
             </div>
           </div>
           
