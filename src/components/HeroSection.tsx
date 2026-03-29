@@ -79,7 +79,7 @@ const HeroSection = () => {
             </h1>
             <div className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
               <div className="h-16 md:h-20 flex items-center justify-center md:min-w-[450px]">
-                <span className="animate-shine text-5xl md:text-7xl lg:text-8xl font-bold leading-none">
+                <span className="animate-shine text-4xl md:text-7xl lg:text-8xl font-bold leading-none">
                   AI Receptionist
                 </span>
               </div>
