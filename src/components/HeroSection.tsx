@@ -75,7 +75,7 @@ const HeroSection = () => {
           {/* Main Headline */}
           <div className="mb-6 animate-fade-up">
             <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground leading-tight mb-4">
-              Helping <span className="relative">clinics<div className="absolute -bottom-1 left-0 w-full h-1"><div className="animate-doodle-line h-full bg-gradient-to-r from-primary via-primary/60 to-primary/20 rounded-full"></div></div></span> grow with
+              Helping Malaysian <span className="relative">clinics<div className="absolute -bottom-1 left-0 w-full h-1"><div className="animate-doodle-line h-full bg-gradient-to-r from-primary via-primary/60 to-primary/20 rounded-full"></div></div></span> grow with
             </h1>
             <div className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
               <div className="h-16 md:h-20 flex items-center justify-center md:min-w-[450px]">
@@ -88,7 +88,7 @@ const HeroSection = () => {
           
           {/* Description */}
           <p className="text-sm md:text-base text-muted-foreground max-w-3xl mx-auto mb-8 animate-fade-up">
-            We're making healthcare more efficient and human-centric through intelligent AI solutions that solve real problems for patients and providers.
+            We're making clinics more efficient and human-centric through intelligent AI solutions that solve real problems for patients and providers.
           </p>
           
           {/* CTA Button */}

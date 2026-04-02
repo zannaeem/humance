@@ -3,20 +3,20 @@ import AnimatedBackground from "./AnimatedBackground";
 
 const problems = [
   {
-    number: "01",
-    title: "Patients message at all hours",
+    number: "1",
+    title: "After hour messages",
     description:
       "WhatsApp enquiries come in at 11pm. Your staff are offline. Patients get no reply and book somewhere else.",
   },
   {
-    number: "02",
-    title: "Booking is a back-and-forth",
+    number: "2",
+    title: "Scheduling hassle",
     description:
       "Scheduling one appointment takes 5 messages and 10 minutes of your team's time. Multiply that by every patient, every day.",
   },
   {
-    number: "03",
-    title: "No-shows with no warning",
+    number: "3",
+    title: "No-shows",
     description:
       "Patients forget their appointments. Nobody follows up. Your clinic loses time and revenue with empty slots.",
   },
@@ -65,23 +65,15 @@ const ProblemSection = () => {
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2
-            className={`text-title mb-4 transition-all duration-700 ease-out ${
+            className={`text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4 transition-all duration-700 ease-out ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
-            Clinics... we heard and{" "}
+            Clinics... we heard and <br />
             <span className="bg-gradient-primary bg-clip-text text-transparent">
-              understand you.
+              understand you
             </span>
           </h2>
-          <p
-            className={`text-base md:text-lg text-muted-foreground transition-all duration-700 ease-out ${
-              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-            }`}
-            style={{ transitionDelay: "0.3s" }}
-          >
-            Sound familiar?
-          </p>
         </div>
 
         {/* Problem cards */}
@@ -94,36 +86,36 @@ const ProblemSection = () => {
               }`}
               style={{ transitionDelay: `${0.1 + index * 0.15}s` }}
             >
-              <span className="text-5xl font-bold text-red-500 leading-none select-none">
-                {problem.number}
-              </span>
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              <div className="flex items-center gap-4">
+                <span className="text-5xl font-bold text-red-500 leading-none select-none">
+                  {problem.number}
+                </span>
+                <h3 className="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 leading-tight">
                   {problem.title}
                 </h3>
-                <p className="text-gray-500 text-sm leading-relaxed">
-                  {problem.description}
-                </p>
               </div>
+              <p className="text-gray-500 text-sm leading-relaxed">
+                {problem.description}
+              </p>
             </div>
           ))}
         </div>
 
         {/* Scroll transition text */}
         <div className="mt-16">
-          <div ref={textRef} className="h-screen flex items-center justify-center text-center px-6">
+          <div ref={textRef} className="h-[55vh] flex items-center justify-center text-center px-6">
             <p className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-4xl mx-auto animate-text-rotate">
               {currentTextIndex === 0 ? (
                 <>
-                  If any of this feels a bit too{" "}
-                  <span className="text-red-500">familiar</span>
-                  .....
+                  These are the{" "}
+                  <span className="text-red-500">realities</span>
+                  {" "}of today's clinics.
                 </>
               ) : (
                 <>
-                  then you're at the{" "}
+                  escape it with our{" "}
                   <span className="bg-gradient-primary bg-clip-text text-transparent">
-                    right place.
+                    solution.
                   </span>
                 </>
               )}

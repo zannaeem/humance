@@ -7,13 +7,6 @@ const IntroducingSection = () => {
       <div className="container mx-auto container-padding relative z-10">
         <div className="pt-20 text-center px-6">
           <div className="max-w-4xl mx-auto space-y-8">
-            {/* Top - "Our Solution" Button */}
-            <div className="animate-fade-up">
-              <button className="bg-primary text-primary-foreground px-6 py-3 rounded-lg text-lg font-semibold hover:bg-primary/90 transition-colors duration-200">
-                Our Solution
-              </button>
-            </div>
-            
         
             
            

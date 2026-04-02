@@ -50,19 +50,13 @@ const BenefitsSection = () => {
       <div className="container mx-auto container-padding relative z-10">
 
         {/* Header */}
-        <div className="max-w-2xl mx-auto text-center mb-16">
-          <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-4">
-            Our Solution
-          </p>
+        <div className="max-w-4xl mx-auto text-center mb-16">
           <h2 className="text-title font-bold text-foreground mb-4 leading-tight">
             Your clinic's AI receptionist,{" "}
             <span className="bg-gradient-primary bg-clip-text text-transparent">
               on WhatsApp
             </span>
           </h2>
-          <p className="text-muted-foreground text-base leading-relaxed">
-            Built for Malaysian clinics. Works on the WhatsApp your patients already use. No new apps, no staff training.
-          </p>
         </div>
 
         {/* Two-column layout */}
